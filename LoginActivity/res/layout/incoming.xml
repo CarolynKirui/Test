@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/callbg"
+            android:scaleType="centerCrop"/>
+
+    <RelativeLayout
+            android:id="@+id/top_panel"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:background="#70000000"
+            android:orientation="vertical">
+
+        <TextView
+                android:id="@+id/remoteUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="false"
+                android:layout_centerInParent="true"
+                android:text="Guybrush"
+                android:textColor="@color/off_white"
+                android:textSize="32sp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentRight="false"
+            android:layout_alignParentTop="false"
+            android:background="#70000000"
+            android:paddingRight="20dp"
+            android:paddingTop="20dp">
+
+        <LinearLayout
+                android:id="@+id/bottom_panel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="false"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="false">
+
+            <Button
+                    android:id="@+id/answer_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/button_accept"/>
+
+            <Button
+                    android:id="@+id/decline_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_decline"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

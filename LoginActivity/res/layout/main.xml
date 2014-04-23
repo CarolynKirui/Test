@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".LoginActivity">
+
+    <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+        <ImageView
+                android:id="@+id/rebtel_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/rebtel_logo"/>
+
+        <EditText
+                android:id="@+id/call_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:inputType="textPersonName"
+                android:textSize="32sp">
+
+            <requestFocus/>
+        </EditText>
+
+        <Button
+                android:id="@+id/call_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="28dp"
+                android:background="@color/rebtel_blue"
+                android:minHeight="56dp"
+                android:minWidth="192dp"
+                android:text="Call"
+                android:textColor="@color/off_white"
+                android:textSize="28dp"
+                android:textStyle="bold"/>
+    </LinearLayout>
+
+    <TextView
+            android:id="@+id/info_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/linearLayout1"
+            android:layout_marginLeft="53dp"
+            android:layout_marginTop="42dp"
+            android:text="Logged in as: "
+            android:textSize="18sp"/>
+
+    <TextView
+            android:id="@+id/logged_in_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/info_text"
+            android:layout_alignBottom="@id/info_text"
+            android:layout_marginLeft="18dp"
+            android:layout_toRightOf="@id/info_text"
+            android:text="Someone"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    <Button
+            android:id="@+id/stop_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:text="Stop service"/>
+
+</RelativeLayout>

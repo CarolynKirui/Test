@@ -1,0 +1,70 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.rebtel.sdk.android.sample</groupId>
+    <artifactId>rebtel-sdk-sample-calling</artifactId>
+    <name>rebtel-sdk-sample-calling</name>
+    <packaging>apk</packaging>
+
+    <parent>
+        <groupId>com.rebtel.sdk.android</groupId>
+        <artifactId>sample-parent</artifactId>
+        <version>2.1.0</version>
+    </parent>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>android</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.rebtel.sdk</groupId>
+            <artifactId>rebtel-sdk-android</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.rebtel.sdk.android</groupId>
+            <artifactId>librebtel-sdk-android</artifactId>
+            <version>${project.version}</version>
+            <classifier>armeabi</classifier>
+            <type>so</type>
+        </dependency>
+
+        <dependency>
+            <groupId>com.rebtel.sdk.android</groupId>
+            <artifactId>librebtel-sdk-android</artifactId>
+            <version>${project.version}</version>
+            <classifier>armeabi-v7a</classifier>
+            <type>so</type>
+        </dependency>
+    </dependencies>
+
+
+    <build>
+        <sourceDirectory>src/main/java</sourceDirectory>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>buildnumber-maven-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                <artifactId>android-maven-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>com.google.code.maven-replacer-plugin</groupId>
+                <artifactId>maven-replacer-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

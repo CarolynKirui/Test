@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".LoginActivity">
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+        <ImageView
+                android:id="@+id/rebtel_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/rebtel_logo"/>
+
+        <EditText
+                android:id="@+id/login_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:hint="Enter your name"
+                android:inputType="textPersonName"
+                android:textSize="32sp">
+
+            <requestFocus/>
+        </EditText>
+
+        <Button
+                android:id="@+id/login_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="28dp"
+                android:background="@color/rebtel_blue"
+                android:minHeight="56dp"
+                android:minWidth="192dp"
+                android:text="Login"
+                android:textColor="@color/off_white"
+                android:textSize="28sp"
+                android:textStyle="bold"/>
+    </LinearLayout>
+
+</RelativeLayout>
