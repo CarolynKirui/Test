@@ -20,7 +20,7 @@ public class AudioPlayer {
 
     private MediaPlayer mPlayer;
 
-    private AudioTrack progressTone;
+    private AudioTrack nprogressTone;
 
     public AudioPlayer(Context context) {
         this.context = context.getApplicationContext();
@@ -61,18 +61,18 @@ public class AudioPlayer {
     public void playProgressTone() {
         stopProgressTone();
         try {
-            progressTone = createProgressTone(context);
-            progressTone.play();
+            nprogressTone = createProgressTone(context);
+            nprogressTone.play();
         } catch (IOException e) {
             Log.e(LOG_TAG, "Could not play progress tone");
         }
     }
 
     public void stopProgressTone() {
-        if (progressTone != null) {
-            progressTone.stop();
-            progressTone.release();
-            progressTone = null;
+        if (nprogressTone != null) {
+            nprogressTone.stop();
+            nprogressTone.release();
+            nprogressTone = null;
         }
     }
 
