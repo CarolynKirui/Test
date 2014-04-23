@@ -28,7 +28,7 @@ public class CallScreenActivity extends Activity {
 
     private TextView callState;
 
-    private long callStart;
+    private long mcallStart;
 
     private AudioPlayer audioPlayer;
 
@@ -52,7 +52,7 @@ public class CallScreenActivity extends Activity {
         Button endCall = (Button) findViewById(R.id.hangup_button);
         endCall.setOnClickListener(endButtonClickListener);
 
-        callStart = System.currentTimeMillis();
+        mcallStart = System.currentTimeMillis();
 
         audioPlayer = new AudioPlayer(this);
     }
@@ -101,7 +101,7 @@ public class CallScreenActivity extends Activity {
 
     private void updateCallDuration() {
         TextView callDuration = (TextView) findViewById(R.id.call_duration);
-        long timespan = System.currentTimeMillis() - callStart;
+        long timespan = System.currentTimeMillis() - mcallStart;
         callDuration.setText(formatTimespan(timespan));
     }
 
