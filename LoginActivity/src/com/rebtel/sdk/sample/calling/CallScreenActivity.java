@@ -91,7 +91,7 @@ public class CallScreenActivity extends Activity {
 
                 @Override
                 public void run() {
-                    updateCallDuration();
+                    updateCallDurationNew();
                 }
             });
         }
@@ -99,7 +99,7 @@ public class CallScreenActivity extends Activity {
 
     ;
 
-    private void updateCallDuration() {
+    private void updateCallDurationNew() {
         TextView callDuration = (TextView) findViewById(R.id.call_duration);
         long timespan = System.currentTimeMillis() - mcallStartNew;
         callDuration.setText(formatTimespan(timespan));
